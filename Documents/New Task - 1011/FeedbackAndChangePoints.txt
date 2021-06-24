@@ -1,0 +1,16 @@
+Parameter checking should be there in all SPs
+
+0 => no error
+1 => error
+2 => sortorderrepeated
+3 => 
+
+as a return value
+
+-------
+SortOrder should not be repeater. if it already exists throw error
+
+---------
+
+change HelpURL => HelpID int
+	      add SettingsID int
