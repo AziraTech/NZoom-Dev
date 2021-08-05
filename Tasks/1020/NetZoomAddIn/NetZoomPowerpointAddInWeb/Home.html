@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <script src="Scripts/jquery-3.5.0.js" type="text/javascript"></script>
+    <script src="Scripts/MessageBanner.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use:  -->
+    <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+    <link href="Content/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- For Office UI Fabric Core, go to https://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css">
+    <style>
+
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <!-- To enable the offline use of Office UI Fabric Core, use: -->
+    <!-- link rel="stylesheet" href="Content/fabric.min.css" -->
+</head>
+
+    <!-- Office UI Fabric JS and it's components are no longer actively supported. Please see https://aka.ms/PnP-OfficeFabricReact for recommended Patterns and Practices -->
+    <!-- <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css"> -->
+
+<body class="ms-Fabric" dir="ltr">
+    <div id="content-main" class="container">
+        <div class="nav">
+            <img src="./Images/nz-logo.svg" title="Netzoom" class="nz-logo" alt="NetZoom Logo">
+            <div class="spacer"></div>
+            <div class="anchors">
+                <a href="#">
+                    <img src="./Images/world-icon.svg" width="25px" alt="Webste" title="Website">
+                </a>
+                <a href="#">
+                    <img src="./Images/info-icon.svg" width="25px" alt="Info" title="info">
+                </a>
+                <a href="#">
+                    <img src="./Images/powerpoint.svg" width="25px" alt="Powerpoint" title="Powerpoint">
+                </a>
+            </div>
+        </div>
+
+        <ul class="tabs">
+            <li class="tab-link" data-tab="tab-1">Data center</li>
+            <li class="tab-link" data-tab="tab-2">Inventory</li>
+            <li class="tab-link current" data-tab="tab-3">Library</li>
+        </ul>
+        <div id="tab-1" class="tab-content">
+            <form>
+                <div class="input-group w100">
+                    <label>Tenants</label>
+                    <select name="cars" class="w100" id="cars" title="Tenants">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div class="input-group w100">
+                    <label>Management Units</label>
+                    <div class="inline w100">
+                        <select name="cars" class="w50" id="cars" title="Management Units">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <select name="cars" class="w50" id="cars" title="Management Units">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="input-group w100">
+                    <label>Filters</label>
+                    <select name="cars" class="w100" id="cars" title="Filters">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+
+                <div class="tree-container">
+                    <ul class="tree-root">
+                        <li class="folder folder-open">
+                            <a class="folder-click">
+                                <span>Folder 1</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                        <li class="rear item-select">Item 2</li>
+                        <li class="top item-select">Item 3</li>
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 2</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 3</span>
+                            </a>
+                            <ul>
+                                <li class="folder">
+                                    <a class="folder-click">
+                                        <span>Sub Folder 1</span>
+                                    </a>
+                                    <ul>
+
+                                        <li class="front item-select">Item 1</li>
+                                        <li class="rear item-select">Item 2</li>
+                                        <li class="top item-select">Item 3</li>
+                                    </ul>
+                                </li>
+                                <li class="front item-select">Item 1</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 3</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 4</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="properties-container">
+                    <ul>
+                        <li class="property-category property-category-open w100">
+                            <a class="property-category-click">
+                                Property Category
+                            </a>
+                            <ul class="w100">
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="property-category w100">
+                            <a class="property-category-click">
+                                Property Category
+                            </a>
+                            <ul class="w100">
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <select name="cars" class="w50" id="cars">
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="opel">Opel</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="propery-group w100">
+                        <label class="w50">Last Discoverd</label>
+                        <select name="cars" class="w50" id="cars">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <form>
+                <div class="input-group w100">
+                    <label>Type</label>
+                    <div class="dropdown w100">
+                        <select name="cars" title="Type" id="cars">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group w100">
+                    <label>Tenants</label>
+                    <div class="dropdown w100">
+                        <select name="cars" id="cars" title="Tenants">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="input-group w100">
+                    <label>Approved</label>
+                    <div class="dropdown w100">
+                        <select name="cars" id="cars" title="Approved">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group w100">
+                    <label>Management Units</label>
+                    <div class="inline w100">
+                        <div class="dropdown w50 mr-10">
+                            <select name="cars" id="cars" title="Management Units">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="dropdown w50">
+                            <select name="cars" id="cars">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="input-group w100">
+                    <div class="inline w100">
+                        <div class="w50" style="margin-right: 10px;">
+                            <label>Arrange By</label>
+                            <div class="dropdown w100">
+                                <select name="cars" id="cars" title="Arrange By">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="opel">Opel</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="w50">
+                            <label>Filter By</label>
+                            <div class="dropdown w100">
+                                <select name="cars" id="cars" title="Filter By">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="opel">Opel</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-container">
+                    <ul class="tree-root">
+                        <li class="folder folder-open">
+                            <a class="folder-click">
+                                <span>Folder 1</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                        <li class="rear item-select">Item 2</li>
+                        <li class="top item-select">Item 3</li>
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 2</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 3</span>
+                            </a>
+                            <ul>
+                                <li class="folder">
+                                    <a class="folder-click">
+                                        <span>Sub Folder 1</span>
+                                    </a>
+                                    <ul>
+
+                                        <li class="front item-select">Item 1</li>
+                                        <li class="rear item-select">Item 2</li>
+                                        <li class="top item-select">Item 3</li>
+                                    </ul>
+                                </li>
+                                <li class="front item-select">Item 1</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 3</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                        <li class="folder">
+                            <a class="folder-click">
+                                <span>Folder 4</span>
+                            </a>
+                            <ul>
+                                <li class="front item-select">Item 1</li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="properties-container">
+                    <ul>
+                        <li class="property-category property-category-open w100">
+                            <a class="property-category-click">
+                                Property Category
+                            </a>
+                            <ul class="w100">
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="property-category w100">
+                            <a class="property-category-click">
+                                Property Category
+                            </a>
+                            <ul class="w100">
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div id="tab-3" class="tab-content current">
+            <form>
+                <div class="input-group w100">
+                    <label>By Keyword</label>
+                    <div class="w100 inline">
+                        <div class="inline" style="width:95%">
+
+                            <div class="data-list-input">
+                                <select class="data-list-input" id="data-list-select">
+                                </select>
+                                <input class="data-list-input" id="data-list-text" title="By Keyword"
+                                       style="padding:4px 6px;border-width:1px;margin:0;" type="text" name="sex"
+                                       required="required" value="">
+                            </div>
+                        </div>
+                        <button class="play-btn" type="button" title="Search">
+                            <img src="./Images/play-icon.svg" alt="play" title="search" width="25px">
+                        </button>
+                    </div>
+
+                    <div class="inline w100" style="margin-top: 5px;">
+                        <input type="radio" id="anyword" name="keyword" title="Any Word" value="anyword" checked>
+                        <label for="anyword">Any Word</label><br>
+                        <input type="radio" id="allword" name="keyword" title="All Words" value="allword">
+                        <label for="allword">All Words</label><br>
+                    </div>
+                </div>
+                <div class="input-group w100">
+                    <label>Manufacturers [5648]</label>
+                    <div class="dropdown w100">
+                        <select name="cars" id="cars" title="Manufacturers">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group w100">
+                    <label>Equipment Types [0]</label>
+                    <div class="dropdown w100">
+                        <select name="cars" id="cars" title="Equipment Types">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group w100">
+                    <label>Product Lines [0]</label>
+                    <div class="dropdown w100">
+                        <select name="cars" id="cars" title="Product Lines">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group w100">
+                    <label>Product Numbers [0]</label>
+                    <div class="dropdown w100">
+                        <select name="cars" id="cars" title="Product Numbers">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group w100">
+                    <label>Filter by Attribute</label>
+                    <div class="dropdown w100" title="Filter by Attribute">
+                        <select name="cars" id="cars">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sub-tab-div" style="background-color: white;">
+                    <ul class="sub-tabs">
+                        <li class="tab-link current" data-tab="sub-tab-1">Results</li>
+                        <li class="tab-link" data-tab="sub-tab-2">Related</li>
+                    </ul>
+                    <div id="sub-tab-1" class="sub-tab-content current">
+                        <div class="tree-container">
+                            <ul class="tree-root">
+                                <li class="folder folder-open">
+                                    <a class="folder-click">
+                                        <span>Folder 1</span>
+                                    </a>
+                                    <ul>
+                                        <li class="front item-select">Item 1</li>
+                                        <li class="rear item-select">Item 2</li>
+                                        <li class="top item-select">Item 3</li>
+                                    </ul>
+                                </li>
+                                <li class="rear item-select">Item 2</li>
+                                <li class="top item-select">Item 3</li>
+                                <li class="folder">
+                                    <a class="folder-click">
+                                        <span>Folder 2</span>
+                                    </a>
+                                    <ul>
+                                        <li class="front item-select">Item 1</li>
+                                        <li class="rear item-select">Item 2</li>
+                                        <li class="top item-select">Item 3</li>
+                                    </ul>
+                                </li>
+
+                                <li class="folder">
+                                    <a class="folder-click">
+                                        <span>Folder 3</span>
+                                    </a>
+                                    <ul>
+                                        <li class="folder">
+                                            <a class="folder-click">
+                                                <span>Sub Folder 1</span>
+                                            </a>
+                                            <ul>
+
+                                                <li class="front item-select">Item 1</li>
+                                                <li class="rear item-select">Item 2</li>
+                                                <li class="top item-select">Item 3</li>
+                                            </ul>
+                                        </li>
+                                        <li class="front item-select">Item 1</li>
+                                        <li class="top item-select">Item 3</li>
+                                    </ul>
+                                </li>
+                                <li class="folder">
+                                    <a class="folder-click">
+                                        <span>Folder 3</span>
+                                    </a>
+                                    <ul>
+                                        <li class="front item-select">Item 1</li>
+                                        <li class="rear item-select">Item 2</li>
+                                        <li class="top item-select">Item 3</li>
+                                    </ul>
+                                </li>
+                                <li class="folder">
+                                    <a class="folder-click">
+                                        <span>Folder 4</span>
+                                    </a>
+                                    <ul>
+                                        <li class="front item-select">Item 1</li>
+                                        <li class="rear item-select">Item 2</li>
+                                        <li class="top item-select">Item 3</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="sub-tab-2" class="sub-tab-content">
+                        <div style="height:100px"></div>
+                    </div>
+                </div>
+
+                <div class="properties-container">
+                    <ul>
+                        <li class="property-category property-category-open w100">
+                            <a class="property-category-click">
+                                Property Category
+                            </a>
+                            <ul class="w100">
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="property-category w100">
+                            <a class="property-category-click">
+                                Property Category
+                            </a>
+                            <ul class="w100">
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propery-group w100">
+                                        <label class="w50">Last Discoverd</label>
+                                        <input type="text" disabled value="109" title="Property" class="w50">
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
