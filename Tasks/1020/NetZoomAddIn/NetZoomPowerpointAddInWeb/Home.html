@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-
     <script src="Scripts/jquery-3.5.0.js" type="text/javascript"></script>
     <script src="Scripts/MessageBanner.js" type="text/javascript"></script>
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
     <script src="Scripts/jquery-ui.js"></script>
-
     <!-- To enable offline debugging using a local reference to Office.js, use:  -->
     <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
     <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
     <link href="Content/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="Content/style.css" rel="stylesheet" type="text/css" />
-
     <!-- For Office UI Fabric Core, go to https://aka.ms/office-ui-fabric to learn more. -->
     <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css">
     <style>
-
         * {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -26,10 +22,8 @@
     <!-- To enable the offline use of Office UI Fabric Core, use: -->
     <!-- link rel="stylesheet" href="Content/fabric.min.css" -->
 </head>
-
-    <!-- Office UI Fabric JS and it's components are no longer actively supported. Please see https://aka.ms/PnP-OfficeFabricReact for recommended Patterns and Practices -->
-    <!-- <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css"> -->
-
+<!-- Office UI Fabric JS and it's components are no longer actively supported. Please see https://aka.ms/PnP-OfficeFabricReact for recommended Patterns and Practices -->
+<!-- <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css"> -->
 <body class="ms-Fabric" dir="ltr">
     <div id="content-main" class="container">
         <div class="nav">
@@ -47,7 +41,6 @@
                 </a>
             </div>
         </div>
-
         <ul class="tabs">
             <li class="tab-link" data-tab="tab-1">Data center</li>
             <li class="tab-link" data-tab="tab-2">Inventory</li>
@@ -80,7 +73,6 @@
                             <option value="audi">Audi</option>
                         </select>
                     </div>
-
                 </div>
                 <div class="input-group w100">
                     <label>Filters</label>
@@ -91,7 +83,6 @@
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-
                 <div class="tree-container">
                     <ul class="tree-root">
                         <li class="folder folder-open">
@@ -116,7 +107,6 @@
                                 <li class="top item-select">Item 3</li>
                             </ul>
                         </li>
-
                         <li class="folder">
                             <a class="folder-click">
                                 <span>Folder 3</span>
@@ -127,7 +117,6 @@
                                         <span>Sub Folder 1</span>
                                     </a>
                                     <ul>
-
                                         <li class="front item-select">Item 1</li>
                                         <li class="rear item-select">Item 2</li>
                                         <li class="top item-select">Item 3</li>
@@ -159,7 +148,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="properties-container">
                     <ul>
                         <li class="property-category property-category-open w100">
@@ -226,7 +214,6 @@
                             </ul>
                         </li>
                     </ul>
-
                     <div class="propery-group w100">
                         <label class="w50">Last Discoverd</label>
                         <select name="cars" class="w50" id="cars">
@@ -262,7 +249,6 @@
                             <option value="audi">Audi</option>
                         </select>
                     </div>
-
                 </div>
                 <div class="input-group w100">
                     <label>Approved</label>
@@ -295,7 +281,6 @@
                             </select>
                         </div>
                     </div>
-
                 </div>
                 <div class="input-group w100">
                     <div class="inline w100">
@@ -310,7 +295,6 @@
                                 </select>
                             </div>
                         </div>
-
                         <div class="w50">
                             <label>Filter By</label>
                             <div class="dropdown w100">
@@ -324,7 +308,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="tree-container">
                     <ul class="tree-root">
                         <li class="folder folder-open">
@@ -349,7 +332,6 @@
                                 <li class="top item-select">Item 3</li>
                             </ul>
                         </li>
-
                         <li class="folder">
                             <a class="folder-click">
                                 <span>Folder 3</span>
@@ -360,7 +342,6 @@
                                         <span>Sub Folder 1</span>
                                     </a>
                                     <ul>
-
                                         <li class="front item-select">Item 1</li>
                                         <li class="rear item-select">Item 2</li>
                                         <li class="top item-select">Item 3</li>
@@ -466,20 +447,17 @@
                     <label>By Keyword</label>
                     <div class="w100 inline">
                         <div class="inline" style="width:95%">
-
                             <div class="data-list-input">
-                                <select class="data-list-input" id="data-list-select">
-                                </select>
+                                <select class="data-list-input" id="data-list-select"></select>
                                 <input class="data-list-input" id="data-list-text" title="By Keyword"
                                        style="padding:4px 6px;border-width:1px;margin:0;" type="text" name="sex"
                                        required="required" value="">
                             </div>
                         </div>
-                        <button class="play-btn" type="button" title="Search">
+                        <button class="play-btn" type="button" title="Search" id="btnSearchLibrary">
                             <img src="./Images/play-icon.svg" alt="play" title="search" width="25px">
                         </button>
                     </div>
-
                     <div class="inline w100" style="margin-top: 5px;">
                         <input type="radio" id="anyword" name="keyword" title="Any Word" value="anyword" checked>
                         <label for="anyword">Any Word</label><br>
@@ -488,61 +466,49 @@
                     </div>
                 </div>
                 <div class="input-group w100">
-                    <label>Manufacturers [5648]</label>
+                    <label id="libLableManufacturer">Manufacturers [5648]</label>
                     <div class="dropdown w100">
-                        <select name="cars" id="cars" title="Manufacturers">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                        <select name="manufacturer" id="libManufaturers" title="Manufacturers">
+                            <option value="" selected>All</option>
                         </select>
                     </div>
                 </div>
                 <div class="input-group w100">
-                    <label>Equipment Types [0]</label>
+                    <label id="libLableEqType">Equipment Types [0]</label>
                     <div class="dropdown w100">
-                        <select name="cars" id="cars" title="Equipment Types">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                        <select name="eqtypes" id="libEqTypes" title="Equipment Types">
+                            <option value="" selected>All</option>
                         </select>
                     </div>
                 </div>
                 <div class="input-group w100">
-                    <label>Product Lines [0]</label>
+                    <label id="libLableProductLines">Product Lines [0]</label>
                     <div class="dropdown w100">
-                        <select name="cars" id="cars" title="Product Lines">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                        <select name="prolines" id="libProductLines" title="Product Lines">
+                            <option value="" selected>All</option>
                         </select>
                     </div>
                 </div>
                 <div class="input-group w100">
-                    <label>Product Numbers [0]</label>
+                    <label id="libLableProductNos">Product Numbers [0]</label>
                     <div class="dropdown w100">
-                        <select name="cars" id="cars" title="Product Numbers">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                        <select name="cars" id="libProductNos" title="Product Numbers">
+                            <option value="" selected>All</option>
                         </select>
                     </div>
                 </div>
                 <div class="input-group w100">
                     <label>Filter by Attribute</label>
                     <div class="dropdown w100" title="Filter by Attribute">
-                        <select name="cars" id="cars">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                        <select name="attributes" id="libAttributeFilter">
+                            <option value="" selected>All</option>
+                            <option value="Racks/Cabinets">Racks/Cabinets</option>
+                            <option value="Rackmountable">Rackmountable</option>
+                            <option value="Cards/Modules">Cards/Modules</option>
+                            <option value="Chassis">Chassis</option>
                         </select>
                     </div>
                 </div>
-
                 <div class="sub-tab-div" style="background-color: white;">
                     <ul class="sub-tabs">
                         <li class="tab-link current" data-tab="sub-tab-1">Results</li>
@@ -573,7 +539,6 @@
                                         <li class="top item-select">Item 3</li>
                                     </ul>
                                 </li>
-
                                 <li class="folder">
                                     <a class="folder-click">
                                         <span>Folder 3</span>
@@ -584,7 +549,6 @@
                                                 <span>Sub Folder 1</span>
                                             </a>
                                             <ul>
-
                                                 <li class="front item-select">Item 1</li>
                                                 <li class="rear item-select">Item 2</li>
                                                 <li class="top item-select">Item 3</li>
@@ -621,7 +585,6 @@
                         <div style="height:100px"></div>
                     </div>
                 </div>
-
                 <div class="properties-container">
                     <ul>
                         <li class="property-category property-category-open w100">
@@ -692,5 +655,348 @@
         </div>
     </div>
     <script src="Scripts/script.js"></script>
+    <script>
+        var token;
+        var ToNotifyIfResultsExceed = true,
+        NotificationCount = 200,
+        remember_history = false,
+        IncludeRelatedMfg = false,
+        TreeGroupBy1Val = "Manufacturer",
+        TreeGroupBy2Val = "Equipment Type",
+        TreeGroupBy3Val = "Product Line",
+        TreeGroupBy4Val = "Product/Model Number",
+        IsGroupOrderAsc1 = true,
+        IsGroupOrderAsc2 = true,
+        IsGroupOrderAsc3 = true,
+        IsGroupOrderAsc4 = true,
+        search_history = [];
+        $(document).ready(function () {
+            token = getCookie("Token");
+            if (!token) {
+                window.location.href = "./index.html";
+            }
+            $.ajax({
+                "url": "https://12.97.39.109/api/VisioAddIn.svc/MenuGetAppSettings",
+                "method": "POST",
+                "timeout": 0,
+                "dataType": "json",
+                "headers": {
+                    //"Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "token": token,
+                    "AS": { ASLevel: 3, CategoryID: 140, RoleID: 0, SiteID: 0, UserID: 0 }
+                })
+            }).done(function (result) {
+                debugger;
+                
+                $.each(result, function (ind) {
+
+                    if (this.Name.toLowerCase() === "notifyresultsexceedcountcheck") {
+
+                        ToNotifyIfResultsExceed = this.Value.toLowerCase() === "true" ? true : false;
+                    }
+                    else if (this.Name.toLowerCase() === "notifyresultsexceedcount") {
+
+                        NotificationCount = Number(this.Value);
+                    }
+                    else if (this.Name.toLowerCase() === "includerelatedmanufacturers") {
+
+                        IncludeRelatedMfg = this.Value.toLowerCase() === "true" ? true : false;
+                    }
+                    else if (this.Name.toLowerCase() === "rememberlastsearchcountcheck") {
+                        remember_history = this.Value.toLowerCase() === "true" ? true : false;
+                    }
+                    else if (this.Name.toLowerCase() === "rememberlastsearchcount") {
+                        max_history_length = Number(this.Value);
+                    }
+                    else if (this.Name.toLowerCase() === "sortorder") {
+
+                        var SortOrder = '<?xml version="1.0" ?><SortOrder>' + this.Value + '</SortOrder>'
+                        var xmlDoc = $.parseXML(SortOrder);
+                        TreeGroupBy1Val = xmlDoc.getElementsByTagName("TreeGroupBy1")[0].childNodes[0].nodeValue;
+                        TreeGroupBy2Val = xmlDoc.getElementsByTagName("TreeGroupBy2")[0].childNodes[0].nodeValue;
+                        TreeGroupBy3Val = xmlDoc.getElementsByTagName("TreeGroupBy3")[0].childNodes[0].nodeValue;
+                        TreeGroupBy4Val = xmlDoc.getElementsByTagName("TreeGroupBy4")[0].childNodes[0].nodeValue;
+                        IsGroupOrderAsc1 = xmlDoc.getElementsByTagName("IsGroupOrderAsc1")[0].childNodes[0].nodeValue.toLowerCase() === "true" ? true : false;
+                        IsGroupOrderAsc2 = xmlDoc.getElementsByTagName("IsGroupOrderAsc2")[0].childNodes[0].nodeValue.toLowerCase() === "true" ? true : false;
+                        IsGroupOrderAsc3 = xmlDoc.getElementsByTagName("IsGroupOrderAsc3")[0].childNodes[0].nodeValue.toLowerCase() === "true" ? true : false;
+                        IsGroupOrderAsc4 = xmlDoc.getElementsByTagName("IsGroupOrderAsc4")[0].childNodes[0].nodeValue.toLowerCase() === "true" ? true : false;
+
+                    }
+                });
+                loadKwdHistory();
+            });
+
+            var settings = {
+                "url": "https://12.97.39.109/api/VisioAddIn.svc/GetLibraryAvailableManufacturersNew",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    //"Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "token": token,
+                    "FullLibrary": false,
+                    "models": null
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                $('#libManufaturers').html('');
+                var xmlDoc = $.parseXML(response);
+                var html = '<option value="" selected>All</option>';
+                $(xmlDoc.documentElement).find('Result').each(function (index) {
+                    html += '<option value="' + $(this).find('MfgAcronym').text() + '">' + $(this).find('Manufacturer').text() + '</option>';
+                });
+                $('#libManufaturers').html(html);
+                $('#libLableManufacturer').text('Manufacturer [' + $(xmlDoc.documentElement).find('Result').length + "]");
+            }).fail(function (xhr, err) {
+
+                var responseTitle = $(xhr.responseText).filter('title').get(0);
+                alert($(responseTitle).text() + "\n" + formatErrorMessage(xhr, err));
+            });
+
+            $('#libManufaturers').on('change', function () {
+                var selVal = $(this).val();
+                if (selVal != null && selVal != undefined) {
+                    $.ajax({
+                        "url": "https://12.97.39.109/api/VisioAddIn.svc/GetLibraryAvailableEqTypesNew",
+                        "method": "POST",
+                        "timeout": 0,
+                        "dataType": "json",
+                        "headers": {
+                            //"Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                            "Content-Type": "application/json"
+                        },
+                        "data": JSON.stringify({
+                            "token": token,
+                            "ActualMfgAcronym": selVal,
+                            "models": null,
+                            "FullLibrary": false
+                        })
+                    }).done(function (result) {
+                        debugger;
+                        setEqTypes(result);
+                    });
+                }
+            });
+
+            $('#libEqTypes').on('change', function () {
+                var selValEqtType = $(this).val();
+                var selValMfg = $('#libManufaturers').val();
+                if (selValEqtType != null && selValEqtType != undefined) {
+                    $.ajax({
+                        "url": "https://12.97.39.109/api/VisioAddIn.svc/GetLibraryAvailableProdLinesNew",
+                        "method": "POST",
+                        "timeout": 0,
+                        "dataType": "json",
+                        "headers": {
+                            //"Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                            "Content-Type": "application/json"
+                        },
+                        data: JSON.stringify({
+                            "token": token,
+                            "ActualMfgAcronym": selValMfg,
+                            "EqTypeToGetFor": selValEqtType,
+                            "models": null,
+                            "FullLib": false
+                        })
+                    }).done(function (result) {
+                        setProductLines(result);
+
+                    });
+                }
+            });
+
+            $('#libProductLines').on('change', function () {
+                var selValProLines = $(this).val();
+                var selValEqtType = $('#libEqTypes').val();
+                var selValMfg = $('#libManufaturers').val();
+                if (selValProLines != null && selValProLines != undefined) {
+                    $.ajax({
+                        "url": "https://12.97.39.109/api/VisioAddIn.svc/GetLibraryAvailableProdNumbersNew",
+                        "method": "POST",
+                        "timeout": 0,
+                        "dataType": "json",
+                        "headers": {
+                            //"Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                            "Content-Type": "application/json"
+                        },
+                        data: JSON.stringify({
+                            "token": token,
+                            "ActualMfgAcronym": selValMfg,
+                            "EqTypeToGetFor": selValEqtType,
+                            "ProdLineToGetFor": selValProLines,
+                            "models": null,
+                            "FullLib": false
+                        })
+                    }).done(function (result) {
+                        setProductNo(result);
+                    });
+                }
+            });
+        });
+        function setEqTypes(data) {
+            if (data != null && data != undefined) {
+                var html = $('#libEqTypes').html();
+                html = '<option value="" selected>All</option>';
+                data.forEach(function (v) {
+                    html += ' <option value="' + v + '">' + v + '</option>';
+                });
+                $('#libEqTypes').html(html);
+                $('#libLableEqType').text("Equipment Types [" + data.length + "]");
+            }
+        }
+
+        function setProductLines(data) {
+            if (data != null && data != undefined) {
+                var html = $('#libProductLines').html();
+                html = '<option value="" selected>All</option>';
+                data.forEach(function (v) {
+                    html += '<option value="' + v + '">' + v + '</option>';
+                });
+                $('#libProductLines').html(html);
+                $('#libLableProductLines').text("Product Lines [" + data.length + "]");
+            }
+        }
+
+        function setProductNo(data) {
+            if (data != null && data != undefined) {
+                var html = $('#libProductNos').html();
+                html = '<option value="" selected>All</option>';
+                data.forEach(function (v) {
+                    html += '<option value="' + v + '">' + v + '</option>';
+                });
+                $('#libProductNos').html(html);
+                $('#libLableProductNos').text("Product Numbers [" + data.length + "]");
+            }
+        }
+
+        $('#btnSearchLibrary').on('click', function () {
+            searchLibrary();
+        });
+
+        $('#data-list-text').on('keyup', function (event) {
+            if (event.keyCode === 13) {
+                searchLibrary();
+                var kwd = $(this).val();
+                if (kwd) {
+
+                appendToKwdHistory();
+                }
+            }
+        });
+
+        function searchLibrary() {
+
+            var selValMfg = $('#libManufaturers').val();
+            var selValEqtType = $('#libEqTypes').val();
+            var selValProLine = $('#libProductLines').val();
+            var selValProNo = $('#libProductNos').val();
+            var selValAttrib = $('#libAttributeFilter').val();
+
+            var settings = {
+                "url": "https://12.97.39.109/api/VisioAddIn.svc/SearchLibraryNew",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "token": "99C60223A50442AF90F08C680F6974F1",
+                    "ParamXML": "<ParamXML><SearchParams><AtttibuteFilter>" + selValMfg + "</AtttibuteFilter><EqType>" + selValEqtType + "</EqType><MfgAcronym>" + selValMfg + "</MfgAcronym><ProductLine>" + selValProLine + "</ProductLine><ProductNum>" + selValProNo + "</ProductNum></SearchParams><SearchPref><GroupBy1>" + TreeGroupBy1Val + "</GroupBy1><GroupBy2>" + TreeGroupBy2Val + "</GroupBy2><GroupBy3>" + TreeGroupBy3Val + "</GroupBy3><GroupBy4>" + TreeGroupBy4Val + "</GroupBy4><IncludeRelatedMfg>" + IncludeRelatedMfg + "</IncludeRelatedMfg><IsGroupOrderAsc1>" + IsGroupOrderAsc1 + "</IsGroupOrderAsc1><IsGroupOrderAsc2>" + IsGroupOrderAsc2 + "</IsGroupOrderAsc2><IsGroupOrderAsc3>" + IsGroupOrderAsc3 + "</IsGroupOrderAsc3><IsGroupOrderAsc4>" + IsGroupOrderAsc4 + "</IsGroupOrderAsc4><NotificationCount>" + NotificationCount + "</NotificationCount></SearchPref></ParamXML>",
+                    "FullLib": false
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+
+            });
+        }
+
+        function appendToKwdHistory(kwd) {
+
+            //var history_check = (api.current_settings("RememberLastSearchCountCheck", "Search").toLowerCase() === 'true');
+            if (remember_history) {
+                if (search_history == null) {
+
+                    search_history = [];
+                }
+                if ($.inArray(kwd, search_history) < 0) {
+
+                    search_history.splice(0, 0, kwd);
+                }
+                if (search_history.length > max_history_length) {
+
+                    search_history.splice(search_history.length - 1, 1);
+                }
+                $.ajax({
+                    "url": "https://12.97.39.109/api/EnterpriseService.svc/SetLastState",
+                    "method": "POST",
+                    "timeout": 0,
+                    "dataType": "json",
+                    "headers": {
+                        //"Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                        "Content-Type": "application/json"
+                    },
+                    data: JSON.stringify({
+                        "token": token,
+                        name: "LIBRARY_SEARCH_HISTORY",
+                        value: search_history.join("<#>")
+                    })
+                }).done(function (result) {
+                    
+                });
+            }
+            else {
+                search_history = [];
+                if ($.inArray(kwd, search_history) < 0) {
+
+                    search_history.splice(0, 0, kwd);
+                }
+            }
+            loadKwdHistory();
+        };
+
+        function loadKwdHistory() {
+
+            //var history_check = (api.current_settings("RememberLastSearchCountCheck", "Search").toLowerCase() === 'true');
+            //max_history_length = parseInt(api.current_settings("RememberLastSearchCount", "Search"));
+            if (remember_history) {
+                $.ajax({
+                    "url": "https://12.97.39.109/api/EnterpriseService.svc/GetLastState",
+                    "method": "POST",
+                    "timeout": 0,
+                    "dataType": "json",
+                    "headers": {
+                        //"Authorization": "Basic ZGV2dXNlcjpEZXZAZG0xbg==",
+                        "Content-Type": "application/json"
+                    },
+                    data: JSON.stringify({
+                        "token": token,
+                        name: "LIBRARY_SEARCH_HISTORY" 
+                    })
+                }).done(function (data) {
+                    if (!data) {
+                        data = "";
+                    }
+                    search_history = data.split("<#>");
+                    $('#data-list-select').html('');
+                    var html='';
+                    search_history.forEach(function (v) {
+                        html+='<option value="' + v + '">' + v + '</option>';
+                    });
+                    $('#data-list-select').html(html);
+                    kwd_history_data.setDataSource(search_history);
+                });
+               
+            }
+        };
+    </script>
 </body>
 </html>
