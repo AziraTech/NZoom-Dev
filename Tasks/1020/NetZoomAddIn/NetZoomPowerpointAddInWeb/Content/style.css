@@ -25,7 +25,7 @@ body {
     height: auto;
     overflow-y: scroll;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
 .container {
@@ -127,7 +127,16 @@ ul.sub-tabs {
     padding: 15px;
 }
 
+.prop-tab-content {
+    display: none;
+    border-radius: 5px;
+    background: white;
+    padding: 0 0 15px 0;
+    width: 100%;
+}
+
     .tab-content.current,
+    .prop-tab-content.current,
     .sub-tab-content.current {
         display: inherit;
         height: 100%;
@@ -355,9 +364,10 @@ ul.sub-tabs {
     -ms-flex-align: center;
     align-items: center;
 }
-.play-btn img{
-    height:100%;    
-}
+
+    .play-btn img {
+        height: 100%;
+    }
 
 .drop-btn {
     padding: 2px;
@@ -374,18 +384,32 @@ ul.sub-tabs {
     border-left: 0;
 }
 
-.properties-container {
-    margin-top: 10px;
-    padding: 5px 2px 5px 5px;
+.property-hidden {
+    display: none;
+}
+
+.property-show {
+    display: block;
+}
+
+.property-tabs-container {
     border-radius: 2px;
     border: 1px solid silver;
-    height: 200px;
+    height: 250px;
     overflow-y: scroll;
+    list-style: none;
+}
+
+.properties-container {
+    border-radius: 2px;
+    border: 1px solid silver;
+    height: 100%;
     list-style: none;
 }
 
     .properties-container > ul {
         padding: 0;
+        list-style: none;
         margin-top: 0;
     }
 
@@ -432,7 +456,7 @@ ul.sub-tabs {
         list-style: none;
     }
 
-    .properties-container .propery-group {
+    .properties-container .property-group {
         background-color: white;
         font-weight: 550;
         display: -webkit-box;
@@ -441,13 +465,13 @@ ul.sub-tabs {
         font-size: 11px;
     }
 
-        .properties-container .propery-group label {
+        .properties-container .property-group label {
             /*border: 0.5px solid silver;*/
             padding: 1px 0 1px 4px;
             margin: 0;
         }
 
-        .properties-container .propery-group select {
+        .properties-container .property-group select {
             font-size: 11px;
             padding: 1px 0 1px 4px;
             /*border: 0.5px solid silver;*/
@@ -455,25 +479,24 @@ ul.sub-tabs {
             outline: none;
         }
 
-        .properties-container .propery-group input {
+        .properties-container .property-group input {
             font-size: 11px;
             padding: 1px 0 1px 4px;
-            /*border: 0.5px solid silver;*/ 
+            /*border: 0.5px solid silver;*/
             border: 1px solid transparent;
             outline: none;
         }
-            .properties-container .propery-group input:disabled {
+
+            .properties-container .property-group input:disabled {
                 background-color: white;
                 border: 1px solid transparent;
                 outline: none;
             }
 
-            .auth-container {
-    width: 40%;
+.auth-container {
+    width: 100%;
     height: 50%;
-    margin-top: 20%;
     font-size: small;
-    padding: 20px 20px 5px 20px;
     background-color: #f1f1f1;
 }
 
@@ -529,10 +552,10 @@ ul.sub-tabs {
         margin-right: 10px;
     }
 
-    .nz-logo{
-        width:125px;
-        padding:10px;
-    }
+.nz-logo {
+    width: 125px;
+    padding: 10px;
+}
 
 
 div.data-list-input {

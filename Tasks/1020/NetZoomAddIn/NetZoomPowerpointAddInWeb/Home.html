@@ -42,11 +42,11 @@
             </div>
         </div>
         <ul class="tabs">
-            <li class="tab-link" data-tab="tab-1">Data center</li>
+            <li class="tab-link current" data-tab="tab-1">Data center</li>
             <li class="tab-link" data-tab="tab-2">Inventory</li>
-            <li class="tab-link current" data-tab="tab-3">Library</li>
+            <li class="tab-link" data-tab="tab-3">Library</li>
         </ul>
-        <div id="tab-1" class="tab-content">
+        <div id="tab-1" class="tab-content current">
             <form>
                 <div class="input-group w100">
                     <label>Tenants</label>
@@ -90,9 +90,9 @@
                                 <span>Folder 1</span>
                             </a>
                             <ul>
-                                <li class="front item-select">Item 1</li>
-                                <li class="rear item-select">Item 2</li>
-                                <li class="top item-select">Item 3</li>
+                                <li class="front item-select" id="tree-item-1">Item 1</li>
+                                <li class="rear item-select" id="tree-item-2">Item 2</li>
+                                <li class="top item-select" id="tree-item-3">Item 3</li>
                             </ul>
                         </li>
                         <li class="rear item-select">Item 2</li>
@@ -102,9 +102,9 @@
                                 <span>Folder 2</span>
                             </a>
                             <ul>
-                                <li class="front item-select">Item 1</li>
-                                <li class="rear item-select">Item 2</li>
-                                <li class="top item-select">Item 3</li>
+                                <li class="front item-select" id="tree-item-1">Item 1</li>
+                                <li class="rear item-select" id="tree-item-2">Item 2</li>
+                                <li class="top item-select" id="tree-item-3">Item 3</li>
                             </ul>
                         </li>
                         <li class="folder">
@@ -117,13 +117,13 @@
                                         <span>Sub Folder 1</span>
                                     </a>
                                     <ul>
-                                        <li class="front item-select">Item 1</li>
-                                        <li class="rear item-select">Item 2</li>
-                                        <li class="top item-select">Item 3</li>
+                                        <li class="front item-select" id="tree-item-1">Item 1</li>
+                                        <li class="rear item-select" id="tree-item-2">Item 2</li>
+                                        <li class="top item-select" id="tree-item-3">Item 3</li>
                                     </ul>
                                 </li>
-                                <li class="front item-select">Item 1</li>
-                                <li class="top item-select">Item 3</li>
+                                <li class="front item-select" id="tree-item-1">Item 1</li>
+                                <li class="top item-select" id="tree-item-3">Item 3</li>
                             </ul>
                         </li>
                         <li class="folder">
@@ -131,9 +131,9 @@
                                 <span>Folder 3</span>
                             </a>
                             <ul>
-                                <li class="front item-select">Item 1</li>
-                                <li class="rear item-select">Item 2</li>
-                                <li class="top item-select">Item 3</li>
+                                <li class="front item-select" id="tree-item-1">Item 1</li>
+                                <li class="rear item-select" id="tree-item-2">Item 2</li>
+                                <li class="top item-select" id="tree-item-3">Item 3</li>
                             </ul>
                         </li>
                         <li class="folder">
@@ -141,88 +141,36 @@
                                 <span>Folder 4</span>
                             </a>
                             <ul>
-                                <li class="front item-select">Item 1</li>
-                                <li class="rear item-select">Item 2</li>
-                                <li class="top item-select">Item 3</li>
+                                <li class="front item-select" id="tree-item-1">Item 1</li>
+                                <li class="rear item-select" id="tree-item-2">Item 2</li>
+                                <li class="top item-select" id="tree-item-3">Item 3</li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="properties-container">
-                    <ul>
-                        <li class="property-category property-category-open w100">
-                            <a class="property-category-click">
-                                Property Category
-                            </a>
-                            <ul class="w100">
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <input type="text" disabled value="109" title="Property" class="w50">
-                                </li>
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <input type="text" disabled value="109" title="Property" class="w50">
-                                </li>
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <input type="text" disabled value="109" title="Property" class="w50">
-                                </li>
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <input type="text" disabled value="109" title="Property" class="w50">
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="property-category w100">
-                            <a class="property-category-click">
-                                Property Category
-                            </a>
-                            <ul class="w100">
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <input type="text" disabled value="109" title="Property" class="w50">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <input type="text" disabled value="109" title="Property" class="w50">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <input type="text" disabled value="109" title="Property" class="w50">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="propery-group w100">
-                                        <label class="w50">Last Discoverd</label>
-                                        <select name="cars" class="w50" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="propery-group w100">
-                        <label class="w50">Last Discoverd</label>
-                        <select name="cars" class="w50" id="cars">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
-                        </select>
+                <div class="property-tabs-container">
+
+                    <div id="no-property-to-show">
+                        Please select an item to show property.
                     </div>
+
+                    <div id="tree-item-prop" class="tree-prop property-hidden">
+                        <ul class="sub-tabs">
+                            <li class="tab-link current" data-tab="prop-tab-1">Properties</li>
+                            <li class="tab-link" data-tab="prop-tab-2">Preview</li>
+                        </ul>
+                        <div id="prop-tab-1" class="prop-tab-content current">
+                            <div class="properties-container" id="propertiesContainer">
+                                sggsg
+                            </div>
+                        </div>
+                        <div id="prop-tab-2" class="prop-tab-content">
+
+                            <img src="./Images/Button80x80.png" width="50px" />
+
+                        </div>
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -441,7 +389,7 @@
                 </div>
             </form>
         </div>
-        <div id="tab-3" class="tab-content current">
+        <div id="tab-3" class="tab-content">
             <form>
                 <div class="input-group w100">
                     <label>By Keyword</label>
@@ -658,18 +606,18 @@
     <script>
         var token;
         var ToNotifyIfResultsExceed = true,
-        NotificationCount = 200,
-        remember_history = false,
-        IncludeRelatedMfg = false,
-        TreeGroupBy1Val = "Manufacturer",
-        TreeGroupBy2Val = "Equipment Type",
-        TreeGroupBy3Val = "Product Line",
-        TreeGroupBy4Val = "Product/Model Number",
-        IsGroupOrderAsc1 = true,
-        IsGroupOrderAsc2 = true,
-        IsGroupOrderAsc3 = true,
-        IsGroupOrderAsc4 = true,
-        search_history = [];
+            NotificationCount = 200,
+            remember_history = false,
+            IncludeRelatedMfg = false,
+            TreeGroupBy1Val = "Manufacturer",
+            TreeGroupBy2Val = "Equipment Type",
+            TreeGroupBy3Val = "Product Line",
+            TreeGroupBy4Val = "Product/Model Number",
+            IsGroupOrderAsc1 = true,
+            IsGroupOrderAsc2 = true,
+            IsGroupOrderAsc3 = true,
+            IsGroupOrderAsc4 = true,
+            search_history = [];
         $(document).ready(function () {
             token = getCookie("Token");
             if (!token) {
@@ -690,7 +638,7 @@
                 })
             }).done(function (result) {
                 debugger;
-                
+
                 $.each(result, function (ind) {
 
                     if (this.Name.toLowerCase() === "notifyresultsexceedcountcheck") {
@@ -756,7 +704,7 @@
             }).fail(function (xhr, err) {
 
                 var responseTitle = $(xhr.responseText).filter('title').get(0);
-                alert($(responseTitle).text() + "\n" + formatErrorMessage(xhr, err));
+                //alert($(responseTitle).text() + "\n" + formatErrorMessage(xhr, err));
             });
 
             $('#libManufaturers').on('change', function () {
@@ -885,7 +833,7 @@
                 var kwd = $(this).val();
                 if (kwd) {
 
-                appendToKwdHistory();
+                    appendToKwdHistory();
                 }
             }
         });
@@ -950,7 +898,7 @@
                         value: search_history.join("<#>")
                     })
                 }).done(function (result) {
-                    
+
                 });
             }
             else {
@@ -979,7 +927,7 @@
                     },
                     data: JSON.stringify({
                         "token": token,
-                        name: "LIBRARY_SEARCH_HISTORY" 
+                        name: "LIBRARY_SEARCH_HISTORY"
                     })
                 }).done(function (data) {
                     if (!data) {
@@ -987,14 +935,14 @@
                     }
                     search_history = data.split("<#>");
                     $('#data-list-select').html('');
-                    var html='';
+                    var html = '';
                     search_history.forEach(function (v) {
-                        html+='<option value="' + v + '">' + v + '</option>';
+                        html += '<option value="' + v + '">' + v + '</option>';
                     });
                     $('#data-list-select').html(html);
                     kwd_history_data.setDataSource(search_history);
                 });
-               
+
             }
         };
     </script>

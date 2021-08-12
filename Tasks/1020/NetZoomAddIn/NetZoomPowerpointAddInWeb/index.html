@@ -36,13 +36,13 @@
             </div>
 
             <div class="auth-footer">
-                <img src="./NetZoom Logo.png" width="100px" style="padding:10px" alt="NetZoom Logo">
+                <img src="./Images/nz-logo.svg" width="100px" style="padding:10px" alt="NetZoom Logo">
                 <div class="spacer"></div>
                 <button type="button" id="btnAuthOK">Ok</button>
                 <button type="button" id="btnAuthCancel">Cancel</button>
                 <button type="button" class="info-btn" style="margin-left: 10px;">
                     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.26 512.26"
-                        width="15px" style="padding-top:2px;">
+                        width="15px" height="20px" style="padding-top:2px;">
                         <path
                             d="M240.11.63h31.94c8.54,1.1,17.14,1.86,25.62,3.35,66,11.66,120.12,43.67,160.9,96.86,44.54,58.1,61.09,124.08,49.55,196.25-10.74,67.15-44.1,121.68-98.25,162.7-55.74,42.22-119,58.45-188.28,49.42-51-6.63-95.85-27.49-134.29-61.61-44.4-39.42-72.12-88.44-82.74-147-1.71-9.45-2.67-19-4-28.55V240.16C1.7,231.62,2.53,223,4,214.55,13,161.4,36.33,115.41,74.19,77c38.22-38.73,84.2-63,137.89-72.49C221.36,2.92,230.76,1.92,240.11.63Zm-5.17,290.75c0,2.82-.12,5.66,0,8.48a21.14,21.14,0,0,0,42.23.17c.19-3.49,0-7,.14-10.48.36-9.08,4.44-15.86,12.73-19.85,18.14-8.74,32.5-21.85,43.75-38.36,13.41-19.69,21.11-40.9,16.9-65.3A96.08,96.08,0,0,0,223.12,91.62c-37.17,13.3-63.44,50.84-62.85,89.81a21.17,21.17,0,0,0,18.14,21.15,20.83,20.83,0,0,0,23.12-14,38.67,38.67,0,0,0,1.48-9.31c1.54-22.17,12.49-38.17,32.78-46.66,20.58-8.6,39.91-4.8,56.48,10.16,18.87,17,21.75,41.29,7.91,62.51-7.22,11.07-16.43,19.92-28.37,25.93C247.17,243.64,235.18,264,234.94,291.38ZM256.11,405a21.17,21.17,0,1,0-21.2-21.13A20.94,20.94,0,0,0,256.11,405Z" />
                     </svg>
@@ -58,11 +58,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
     <script src="./Scripts/script.js"></script>
     <script>
-        debugger;
-        //var token = getCookie("Token");
-        //if (token) {
-        //    window.location.href = "./Home.html";
-        //}
+        var token = getCookie("Token");
+        if (token) {
+            window.location.href = "./Home.html";
+        }
         $('#btnAuthOK').on('click',function(){
             if($('#formAuth').valid()){
                 
